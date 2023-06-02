@@ -1,0 +1,8 @@
+---
+- hosts: centos
+  become: yes
+  tasks: 
+  - name: copy artifacts from nexus to tomcat
+    get_url: 
+      url: http://13.231.2.234:8081/nexus/service/local/repositories/jaga/content/hello-world/war/hello-world-war/49/hello-world-war-49.war
+      dest: /usr/share/tomcat/webapps
