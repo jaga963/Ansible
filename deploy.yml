@@ -1,5 +1,5 @@
 ---
-- hosts: centos
+- hosts: webserver
   become: yes
   tasks: 
   - name: copy artifacts from nexus to tomcat
